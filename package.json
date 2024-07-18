@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -o",
-    "dev": "live-server --watch=index.html,style.css"
+    "dev": "live-server --watch=index.html,style.css",
+    "build": "node build.mjs"
   },
   "keywords": [],
   "author": "",
