@@ -1,3 +1,39 @@
+# Paradnight Studio Website
+
+## Steps to install libraries
+
+### 1. Install Nuxt
+
+```bash
+pnpm dlx nuxi@latest init paradnight-website
+```
+
+### 2. Add Eslint
+
+https://eslint.nuxt.com/packages/module
+
+Add Nuxt ESLint module:
+
+```bash
+npx nuxi module add eslint
+```
+
+Create an eslint.config.mjs file with this content:
+
+```javascript
+import withNuxt from "./.nuxt/eslint.config.mjs";
+
+export default withNuxt();
+```
+
+Add TypeScript too:
+
+```bash
+pnpm add -D typescript
+```
+
+# Nuxt README:
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
