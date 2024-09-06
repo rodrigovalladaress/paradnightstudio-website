@@ -32,6 +32,45 @@ Add TypeScript too:
 pnpm add -D typescript
 ```
 
+### 3. Add Prettier:
+
+https://prettier.io/docs/en/install
+
+Install Prettier:
+
+```bash
+pnpm add --save-dev --save-exact prettier
+```
+
+Create .prettierrc file:
+
+```bash
+node --eval "fs.writeFileSync('.prettierrc','{}\n')"
+```
+
+Create .prettierignore file:
+
+```bash
+node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncoverage\n')"
+```
+
+And add this to .prettierignore:
+
+```
+dist
+coverage
+.vscode/settings.json
+.output
+.nuxt
+pnpm-lock.yaml
+```
+
+Install eslint-config-prettier:
+
+```bash
+pnpm add --save-dev eslint-config-prettier
+```
+
 # Nuxt README:
 
 # Nuxt 3 Minimal Starter

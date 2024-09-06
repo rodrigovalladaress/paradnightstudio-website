@@ -1,0 +1,7 @@
+# Ignore artifacts:
+dist
+coverage
+.vscode/settings.json
+.output
+.nuxt
+pnpm-lock.yaml
