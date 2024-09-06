@@ -32,7 +32,7 @@ Add TypeScript too:
 pnpm add -D typescript
 ```
 
-### 3. Add Prettier:
+### 3. Add Prettier
 
 https://prettier.io/docs/en/install
 
@@ -69,6 +69,41 @@ Install eslint-config-prettier:
 
 ```bash
 pnpm add --save-dev eslint-config-prettier
+```
+
+### 3. Add Stylelint
+
+https://nuxt.com/modules/stylelint
+
+Install Stylelint:
+
+```bash
+pnpm add -D stylelint
+```
+
+Add Nuxt module and stylelint-config-standard-vue and stylelint-config-standard-scss:
+
+```bash
+pnpm add -D @nuxtjs/stylelint-module
+pnpm add stylelint-config-standard-vue stylelint-config-standard-scss --save-dev
+```
+
+Add to nuxt.config.ts:
+
+```json
+  stylelint: {
+    config: {
+      extends: ["stylelint-config-standard-scss", "stylelint-config-standard-vue/scss"],
+      rules: {
+        "declaration-property-unit-allowed-list": {
+          "/^border/": ["px"],
+          "/^padding|^gap/": ["rem"],
+        },
+        "unit-allowed-list": ["%", "deg", "px", "rem", "ms", "fr", "vh", "vw"],
+        "no-empty-source": null,
+      },
+    },
+  },
 ```
 
 # Nuxt README:
