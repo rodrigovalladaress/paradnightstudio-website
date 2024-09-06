@@ -106,6 +106,16 @@ Add to nuxt.config.ts:
   },
 ```
 
+### 3. Use SCSS
+
+https://nuxt.com/docs/getting-started/styling#using-preprocessors
+
+Install sass:
+
+```bash
+pnpm add -D sass
+```
+
 # Nuxt README:
 
 # Nuxt 3 Minimal Starter
