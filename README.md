@@ -106,7 +106,7 @@ Add to nuxt.config.ts:
   },
 ```
 
-### 3. Use SCSS
+### 4. Use SCSS
 
 https://nuxt.com/docs/getting-started/styling#using-preprocessors
 
@@ -114,6 +114,59 @@ Install sass:
 
 ```bash
 pnpm add -D sass
+```
+
+### 5. Testing (Vitest + Vue Testing Library)
+
+https://nuxt.com/docs/getting-started/testing
+https://testing-library.com/docs/vue-testing-library/intro
+
+```bash
+pnpm add -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core @testing-library/vue
+```
+
+Add Nuxt Test Utils module to the config:
+
+```javascript
+export default defineNuxtConfig({
+  modules: ["@nuxt/test-utils/module"],
+});
+```
+
+Create a vitest.config.ts file:
+
+```javascript
+import { defineVitestConfig } from "@nuxt/test-utils/config";
+
+export default defineVitestConfig({
+  // any custom Vitest config you require
+});
+```
+
+#### 5.1 Install @testing-library/jest-dom to be able to use custom Jest matchers:
+
+https://github.com/testing-library/jest-dom?tab=readme-ov-file#with-vitest
+
+```bash
+pnpm add -D @testing-library/jest-dom
+```
+
+Create a tests/vitest.setup.ts with this content:
+
+```javascript
+// https://github.com/testing-library/jest-dom?tab=readme-ov-file#with-vitest
+import "@testing-library/jest-dom/vitest";
+```
+
+And add the path of this setup file to vitest.config.ts:
+
+```javascript
+export default defineVitestConfig({
+  test: {
+    // https://github.com/testing-library/jest-dom?tab=readme-ov-file#with-vitest
+    setupFiles: ["tests/vitest.setup.ts"],
+  },
+});
 ```
 
 # Nuxt README:
