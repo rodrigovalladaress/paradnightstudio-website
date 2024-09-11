@@ -4,6 +4,8 @@
   <GamesSection />
 
   <AboutSection />
+
+  <ContactSection />
 </template>
 
 <style lang="scss">
