@@ -1,5 +1,7 @@
 <template>
   <HeaderItem />
+
+  <GamesSection />
 </template>
 
 <style lang="scss">
