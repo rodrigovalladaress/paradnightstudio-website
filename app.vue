@@ -1,5 +1,5 @@
 <template>
-  <div>Paradnight Studio</div>
+  <HeaderItem />
 </template>
 
 <style lang="scss">
