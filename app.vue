@@ -6,6 +6,8 @@
   <AboutSection />
 
   <ContactSection />
+
+  <FooterItem />
 </template>
 
 <style lang="scss">
