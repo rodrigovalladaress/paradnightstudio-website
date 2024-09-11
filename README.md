@@ -169,6 +169,14 @@ export default defineVitestConfig({
 });
 ```
 
+### 6. Load custom fonts:
+
+https://fonts.nuxt.com/get-started/installation
+
+```bash
+npx nuxi@latest module add fonts
+```
+
 # Nuxt README:
 
 # Nuxt 3 Minimal Starter
