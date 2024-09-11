@@ -2,6 +2,8 @@
   <HeaderItem />
 
   <GamesSection />
+
+  <AboutSection />
 </template>
 
 <style lang="scss">
