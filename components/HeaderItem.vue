@@ -1,8 +1,10 @@
 <template>
   <div>
-    <h1>Paradnight Studio</h1>
+    <h1>
+      <ParadnightLogo />
+    </h1>
 
-    <h2>Crafting weird retro inspired horror games</h2>
+    <h2 class="heading">Crafting weird retro inspired horror games</h2>
   </div>
 </template>
 
