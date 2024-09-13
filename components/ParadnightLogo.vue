@@ -29,7 +29,6 @@ const {
 } = useCapsizeCss();
 
 let capsizeStyles: null | object = null;
-
 if (steelfish) {
   capsizeStyles = createStyleObject({
     capHeight: 35,
