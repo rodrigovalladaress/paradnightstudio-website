@@ -10,6 +10,4 @@
   <FooterItem />
 </template>
 
-<style lang="scss">
-@use "~/assets/main";
-</style>
+<style lang="scss"></style>
