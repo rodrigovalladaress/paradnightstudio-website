@@ -3,5 +3,7 @@
   "singleQuote": false,
   "printWidth": 90,
   "semi": true,
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "bracketSameLine": false,
+  "plugins": ["prettier-plugin-classnames"]
 }
