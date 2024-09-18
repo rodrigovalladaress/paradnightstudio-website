@@ -21,6 +21,10 @@ export default {
         // https://tailwindcss.com/docs/customizing-colors#using-css-variables
         tuna: "rgb(var(--color-tuna))",
         woodsmoke: "rgb(var(--color-woodsmoke))",
+        purple: "rgb(var(--color-purple))",
+      },
+      fontSize: {
+        h2: "40px",
       },
     },
   },
