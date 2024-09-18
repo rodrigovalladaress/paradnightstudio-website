@@ -20,7 +20,7 @@
 
 <style lang="scss" scoped>
 @use "sass:color";
-@import "@/assets/_variables.scss";
+@import "@/assets/styles/_variables.scss";
 
 .bg-gradient {
   background: linear-gradient(

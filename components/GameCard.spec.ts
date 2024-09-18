@@ -19,13 +19,14 @@ const ITEM = {
 
 describe("GameCard", () => {
   beforeEach(async () => {
-    await renderSuspended(GameCard, { props: { ...ITEM } });
+    await renderSuspended(GameCard, { props: { item: ITEM } });
   });
 
   it("shows the info of the game", async () => {
     expect(screen.getByRole("img", { name: `${ITEM.title} logo` })).toBeDefined();
     expect(screen.getByRole("heading", { name: ITEM.title })).toBeDefined();
     expect(screen.getByText(ITEM.description)).toBeDefined();
+    expect(screen.getByText(ITEM.actions[0].label)).toBeDefined();
 
     const button = screen.getByRole("link", { name: ITEM.actions[0].label });
     expect(button).toBeDefined();

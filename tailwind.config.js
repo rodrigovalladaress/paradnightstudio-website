@@ -12,8 +12,12 @@ export default {
     extend: {
       fontFamily: {
         heading: ["'Steelfish rg'", "Arial", "Helvetica", "sans-serif"],
+        sans: ["'Open Sans'", "Arial", "Helvetica", "sans-serif"],
+        "sans-condensed": ["'Encode Sans Condensed'", "Arial", "Helvetica", "sans-serif"],
       },
       spacing: {
+        headingbottomxs: "0.438rem",
+        headingbottom: "0.875rem",
         edge: "30px",
         edge2x: "60px",
       },
@@ -22,9 +26,13 @@ export default {
         tuna: "rgb(var(--color-tuna))",
         woodsmoke: "rgb(var(--color-woodsmoke))",
         purple: "rgb(var(--color-purple))",
+        barneypurple: "rgb(var(--color-barneypurple))",
       },
       fontSize: {
-        h2: "40px",
+        h2: "2.5rem",
+        h3: "2.75rem",
+        h4: "2.25rem",
+        btn: "1.125rem",
       },
     },
   },

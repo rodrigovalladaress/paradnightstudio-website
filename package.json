@@ -18,6 +18,7 @@
     "@nuxt/eslint": "^0.5.6",
     "@nuxt/fonts": "^0.7.2",
     "nuxt": "^3.13.0",
+    "nuxt-svgo": "^4.0.6",
     "vue": "latest",
     "vue-router": "latest"
   },
