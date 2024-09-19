@@ -13,7 +13,7 @@
             class="flex-grow px-[10px] py-[7.08335px] leading-none border border-solid border-white
               bg-woodsmoke text-white placeholder:text-[#c7c7c7] focus:[&:not(:active)]:outline-dashed
               focus:[&:not(:active)]:outline-white"
-            type="text"
+            type="email"
             placeholder="name@email.com"
             :disabled="isSending"
           />
@@ -30,6 +30,10 @@
           </button>
         </div>
 
+        <p v-show="error" class="text-red-300">
+          {{ error }}
+        </p>
+
         <p class="text-[0.875rem]">
           We promise to send no more than two emails per month — usually less than that.
         </p>
@@ -43,11 +47,16 @@
 </template>
 
 <script lang="ts" setup>
-const email = ref("test@email.com");
+const email = ref("");
+const error = ref("An error occurred");
 const isSending = ref(false);
 const isSent = ref(false);
 
 // console.log(import.meta.env.VITE_CONVERTKIT_PUBLIC_API_KEY);
+
+watch(email, () => {
+  error.value = "";
+});
 
 async function subscribeUser() {
   isSending.value = true;
@@ -64,15 +73,34 @@ async function subscribeUser() {
   };
 
   try {
-    await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
-      method: "post",
-      body: JSON.stringify(body),
-      headers: { "Content-Type": "application/json" },
-    });
+    const res = await fetch(
+      `https://api.convertkit.com/v3/forms/23434343${formId}/subscribe`,
+      {
+        method: "post",
+        body: JSON.stringify(body),
+        headers: { "Content-Type": "application/json" },
+      },
+    );
+
+    if (!res.ok) {
+      const { message, error }: { message: string; error: string } = await res.json();
+
+      throw new Error(message || error ? `${error} ${message}.` : "¯\\_(ツ)_/¯");
+    }
 
     isSent.value = true;
   } catch (err) {
-    console.error("error", err);
+    console.error("Submission error:", err);
+
+    let errorMessage = "Something wrong happened: ";
+    if (err instanceof Error) {
+      errorMessage += err.message;
+    } else {
+      errorMessage += `${err}`;
+    }
+    errorMessage += " Try again later.";
+
+    error.value = errorMessage;
   } finally {
     isSending.value = false;
   }
