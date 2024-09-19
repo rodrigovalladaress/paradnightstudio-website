@@ -1,6 +1,8 @@
 <template>
   <a
-    class="flex py-[6px] px-[12px] text-btn leading-none tracking-wide uppercase bg-white text-black"
+    class="flex py-[6px] px-[12px] text-btn leading-none tracking-wide uppercase bg-white text-black
+      transition-colors hover:bg-black hover:text-white active:bg-slate-700 active:text-white
+      focus:[&:not(:active)]:outline-dashed focus:[&:not(:active)]:outline-white"
     :href="href"
     target="_blank"
   >
@@ -8,8 +10,10 @@
       <slot />
     </div>
 
-    <div class="size-[1.5rem]">
-      <component :is="iconComponent" class="size-[100%_!important]" />
+    <div class="flex w-1/3 justify-center">
+      <div class="size-[1.5rem]">
+        <component :is="iconComponent" class="size-[100%_!important]" />
+      </div>
     </div>
   </a>
 </template>
