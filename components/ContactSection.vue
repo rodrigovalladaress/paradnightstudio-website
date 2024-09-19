@@ -7,24 +7,16 @@
     <SubscribeForm />
 
     <div class="flex justify-between mt-edge2x text-springsun">
-      <a href="https://x.com/ParadnightStdio" aria-label="X/Twitter">
-        <div class="size-[3rem]">
-          <SvgoTwitter class="size-[100%_!important]" />
-        </div>
-      </a>
-
       <a
-        href="https://bsky.app/profile/paradnight-studio.bsky.social"
-        aria-label="Bluesky"
+        v-for="item of socials"
+        :key="item.label"
+        :href="item.href"
+        target="_blank"
+        :aria-label="item.label"
+        class="focus:[&:not(:active)]:outline-dashed focus:[&:not(:active)]:outline-white"
       >
         <div class="size-[3rem]">
-          <SvgoBluesky class="size-[100%_!important]" />
-        </div>
-      </a>
-
-      <a href="mailto:paradnightstudio@gmail.com" aria-label="Email">
-        <div class="size-[3rem]">
-          <SvgoEmail class="size-[100%_!important]" />
+          <component :is="item.iconComponent" class="size-[100%_!important]" />
         </div>
       </a>
     </div>
@@ -33,6 +25,37 @@
 
 <script lang="ts" setup>
 import { SubscribeForm, SvgoTwitter, SvgoBluesky, SvgoEmail } from "#components";
+
+const socials = [
+  {
+    href: "https://x.com/ParadnightStdio",
+    label: "X/Twitter",
+    iconComponent: SvgoTwitter,
+  },
+  {
+    href: "https://bsky.app/profile/paradnight-studio.bsky.social",
+    label: "Bluesky",
+    iconComponent: SvgoBluesky,
+  },
+  {
+    href: "mailto:hello@paradnightstudio",
+    label: "Email",
+    iconComponent: SvgoEmail,
+  },
+];
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+svg {
+  transition: filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+a:hover {
+  svg {
+    /* box-shadow: 0 0 0.35rem 0.2rem rgba(255, 255, 255, 0.95); */
+    filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.95));
+  }
+}
+</style>
