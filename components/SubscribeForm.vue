@@ -48,11 +48,9 @@
 
 <script lang="ts" setup>
 const email = ref("");
-const error = ref("An error occurred");
+const error = ref("");
 const isSending = ref(false);
 const isSent = ref(false);
-
-// console.log(import.meta.env.VITE_CONVERTKIT_PUBLIC_API_KEY);
 
 watch(email, () => {
   error.value = "";
