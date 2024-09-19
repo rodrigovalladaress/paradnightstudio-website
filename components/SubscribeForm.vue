@@ -10,7 +10,7 @@
           <input
             id="mailing-list"
             v-model="email"
-            class="flex-grow px-[10px] py-[7.08335px] leading-none border border-solid border-white
+            class="flex-grow min-w-32 px-[10px] py-[7.08335px] leading-none border border-solid border-white
               bg-woodsmoke text-white placeholder:text-[#c7c7c7] focus:[&:not(:active)]:outline-dashed
               focus:[&:not(:active)]:outline-white"
             type="email"
