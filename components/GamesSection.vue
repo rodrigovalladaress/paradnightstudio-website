@@ -1,13 +1,15 @@
 <template>
   <div class="px-edge pb-edge bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
-    <h3 class="mb-headingbottom text-h3 leading-none font-heading text-white">Games</h3>
+    <h3 class="mb-headingbottom text-h3 leading-none font-heading text-springsun">
+      Games
+    </h3>
 
     <div class="flex flex-col gap-7">
       <GameCard v-for="item in games" :key="item.id" :item />
     </div>
 
     <h3
-      class="mt-[3.375rem] mb-headingbottom text-h3 leading-none font-heading text-white"
+      class="mt-[3.375rem] mb-headingbottom text-h3 leading-none font-heading text-springsun"
     >
       Experiments
     </h3>

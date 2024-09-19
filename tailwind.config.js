@@ -20,6 +20,7 @@ export default {
         headingbottom: "0.875rem",
         edge: "30px",
         edge2x: "60px",
+        edge3x: "90px",
       },
       colors: {
         // https://tailwindcss.com/docs/customizing-colors#using-css-variables
@@ -28,6 +29,7 @@ export default {
         purple: "rgb(var(--color-purple))",
         barneypurple: "rgb(var(--color-barneypurple))",
         buff: "rgb(var(--color-buff))",
+        springsun: "rgb(var(--color-springsun))",
       },
       fontSize: {
         h2: "2.5rem",
