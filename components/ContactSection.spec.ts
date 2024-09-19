@@ -27,4 +27,18 @@ describe("ContactSection", () => {
   it("shows the information copy", async () => {
     expect(screen.getByText(/We promise to send/i)).toBeDefined();
   });
+
+  it("shows the social media and email links", async () => {
+    const x = screen.getByRole("link", { name: /x/i });
+    expect(x).toBeDefined();
+    expect(x.getAttribute("href")).toContain("x.com");
+
+    const blueSky = screen.getByRole("link", { name: /Bluesky/i });
+    expect(blueSky).toBeDefined();
+    expect(blueSky.getAttribute("href")).toContain("bsky.app");
+
+    const email = screen.getByRole("link", { name: /Email/i });
+    expect(email).toBeDefined();
+    expect(email.getAttribute("href")).toContain("@");
+  });
 });
