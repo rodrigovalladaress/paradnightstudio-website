@@ -19,7 +19,6 @@
 <script lang="ts" setup></script>
 
 <style lang="scss" scoped>
-@use "sass:color";
 @import "@/assets/styles/_variables.scss";
 
 .bg-gradient {

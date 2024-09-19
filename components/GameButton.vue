@@ -1,8 +1,9 @@
 <template>
   <a
-    class="flex py-[6px] px-[12px] text-btn leading-none tracking-wide uppercase bg-white text-black
-      transition-colors hover:bg-black hover:text-white active:bg-slate-700 active:text-white
-      focus:[&:not(:active)]:outline-dashed focus:[&:not(:active)]:outline-white"
+    class="button flex py-[6px] px-[12px] text-btn leading-none tracking-wide uppercase bg-white
+      text-black transition-all duration-200 hover:bg-woodsmoke hover:text-white active:bg-tuna
+      active:text-white focus:[&:not(:active)]:outline-dashed
+      focus:[&:not(:active)]:outline-white"
     :href="href"
     target="_blank"
   >
@@ -40,4 +41,16 @@ const iconComponent = computed(() => {
 });
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "@/assets/styles/_variables.scss";
+
+.button {
+  &:hover {
+    box-shadow: 0 0 0.35rem 0.2rem rgba(255, 255, 255, 0.95);
+  }
+
+  &:active {
+    box-shadow: 0 0 0.45rem 0.3rem #{mix($color-buff, transparent, 95%)};
+  }
+}
+</style>

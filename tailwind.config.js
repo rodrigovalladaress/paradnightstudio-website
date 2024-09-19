@@ -27,6 +27,7 @@ export default {
         woodsmoke: "rgb(var(--color-woodsmoke))",
         purple: "rgb(var(--color-purple))",
         barneypurple: "rgb(var(--color-barneypurple))",
+        buff: "rgb(var(--color-buff))",
       },
       fontSize: {
         h2: "2.5rem",

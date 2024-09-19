@@ -8,7 +8,10 @@
       />
     </div>
 
-    <div class="px-[18px] pt-[11px] pb-[18px] bg-barneypurple">
+    <div
+      class="px-[18px] pt-[11px] pb-[18px]"
+      :class="{ 'bg-barneypurple': item.isFeatured, 'bg-woodsmoke': !item.isFeatured }"
+    >
       <h4 class="text-h4 font-heading mb-headingbottomxs text-white leading-none">
         {{ item.title }}
       </h4>

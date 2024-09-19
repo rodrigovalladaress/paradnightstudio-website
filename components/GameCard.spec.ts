@@ -3,8 +3,10 @@ import { screen } from "@testing-library/vue";
 import { beforeEach, expect, describe, it } from "vitest";
 import { renderSuspended } from "@nuxt/test-utils/runtime";
 import GameCard from "./GameCard.vue";
+import type { Game } from "~/types/game";
 
-const ITEM = {
+const ITEM: Game = {
+  id: "0",
   title: "The Nameless City",
   description: "Narrative-driven first person horror adventure",
   image:

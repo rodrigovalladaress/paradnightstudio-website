@@ -12,6 +12,7 @@
     --color-woodsmoke: #{format-color-for-tailwind($color-woodsmoke)};
     --color-purple: #{format-color-for-tailwind($color-purple)};
     --color-barneypurple: #{format-color-for-tailwind($color-barneypurple)};
+    --color-buff: #{format-color-for-tailwind($color-buff)};
 
     // https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/#leveraging-css-variables-15
     --14px: 0.875rem;
