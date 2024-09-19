@@ -16,6 +16,7 @@
             type="email"
             placeholder="name@email.com"
             :disabled="isSending"
+            required
           />
 
           <button
