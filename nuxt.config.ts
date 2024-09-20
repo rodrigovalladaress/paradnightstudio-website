@@ -16,4 +16,15 @@ export default defineNuxtConfig({
     preset: "netlify-static",
     static: true,
   },
+  app: {
+    head: {
+      title: "Paradnight Studio | Indie game studio",
+      meta: [
+        {
+          name: "description",
+          content: "Crafting weird retro inspired horror games",
+        },
+      ],
+    },
+  },
 });
