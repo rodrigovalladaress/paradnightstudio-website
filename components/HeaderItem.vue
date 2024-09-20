@@ -1,33 +1,48 @@
 <template>
-  <div>
-    <div
-      class="flex justify-center px-edge pt-edge2x bg-gradient-to-b from-tuna/95 to-woodsmoke/95"
-    >
-      <h1 class="w-fit overflow-hidden">
-        <ParadnightLogo />
-      </h1>
-    </div>
+  <!-- Mobile header -->
+  <div class="lg:hidden">
+    <HeaderItemMobile />
+  </div>
 
-    <div class="flex justify-center px-edge pt-[117px] pb-[135px] bg-gradient">
-      <h2 class="max-w-[300px] leading-[1.1] text-center font-heading text-h2 text-white">
-        Crafting weird retro inspired horror games
-      </h2>
-    </div>
+  <!-- Desktop header -->
+  <div
+    class="hidden lg:flex 2xl:hidden flex-col min-h-screen px-edge py-edge2x gap-[50px]
+      justify-center bg-gradient-desktop-lg"
+  >
+    <HeaderItemDesktop />
+  </div>
+
+  <!-- XL Desktop header -->
+  <div
+    class="hidden 2xl:flex flex-col min-h-screen px-edge py-edge2x gap-[50px] justify-center
+      bg-gradient-desktop-xl"
+  >
+    <HeaderItemDesktop />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { HeaderItemMobile, HeaderItemDesktop } from "#components";
+</script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_variables.scss";
 
-.bg-gradient {
-  background: linear-gradient(
-    180deg,
-    #{mix($color-woodsmoke, transparent, 95%)} 0%,
-    #{mix($color-purple, transparent, 95%)} 23%,
-    #{mix($color-purple, transparent, 95%)} 77%,
-    #{mix($color-tuna, transparent, 95%)} 100%
+.bg-gradient-desktop-lg {
+  background: radial-gradient(
+    circle at center,
+    #{mix($color-violetpink, transparent, 95%)} 0%,
+    #{mix($color-royalpurple, transparent, 95%)} 30%,
+    #{mix($color-woodsmoke, transparent, 95%)} 42%
+  );
+}
+
+.bg-gradient-desktop-xl {
+  background: radial-gradient(
+    circle at center,
+    #{mix($color-violetpink, transparent, 95%)} 0%,
+    #{mix($color-royalpurple, transparent, 95%)} 20%,
+    #{mix($color-woodsmoke, transparent, 95%)} 32%
   );
 }
 </style>

@@ -10,14 +10,22 @@ describe("HeaderItem", () => {
   });
 
   it("shows the title", async () => {
-    expect(screen.getByRole("heading", { name: /Paradnight Studio/i })).toBeDefined();
+    // Use getAllByRole, as Testing Library get the heading even when it's
+    // hidden
+    expect(
+      screen.getAllByRole("heading", { name: /Paradnight Studio/i }).at(0),
+    ).toBeDefined();
   });
 
   it("shows the subtitle", async () => {
+    // Use getAllByRole, as Testing Library get the heading even when it's
+    // hidden
     expect(
-      screen.getByRole("heading", {
-        name: /Crafting weird retro inspired horror games/i,
-      }),
+      screen
+        .getAllByRole("heading", {
+          name: /Crafting weird retro inspired horror games/i,
+        })
+        .at(0),
     ).toBeDefined();
   });
 });

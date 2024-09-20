@@ -6,8 +6,9 @@
       class="relative border-solid border-[6px] border-black bg-white scale-[0.75] w-[212px] h-[256px]
         md:scale-[1.25]"
     >
+      <!-- Mobile video -->
       <video
-        class="absolute top-[10px] left-[10px] size-[180px]"
+        class="lg:hidden absolute top-[10px] left-[10px] size-[180px]"
         poster="https://paradnight-studio.sirv.com/paradnight-website/only_paradnight.png?w=320&h=320"
         preload="metadata"
         loop
@@ -16,6 +17,21 @@
       >
         <source
           src="https://paradnight-studio.sirv.com/paradnight-website/paradnight_loop_320.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- Desktop video -->
+      <video
+        class="lg:block absolute top-[10px] left-[10px] size-[180px]"
+        poster="https://paradnight-studio.sirv.com/paradnight-website/only_paradnight.png?w=640&h=640"
+        preload="metadata"
+        loop
+        autoplay
+        muted
+      >
+        <source
+          src="https://paradnight-studio.sirv.com/paradnight-website/paradnight_loop_640.mp4"
           type="video/mp4"
         />
       </video>

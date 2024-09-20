@@ -26,6 +26,7 @@ export default {
         // https://tailwindcss.com/docs/customizing-colors#using-css-variables
         tuna: "rgb(var(--color-tuna))",
         woodsmoke: "rgb(var(--color-woodsmoke))",
+        violetpink: "rgb(var(--color-violetpink))",
         purple: "rgb(var(--color-purple))",
         barneypurple: "rgb(var(--color-barneypurple))",
         buff: "rgb(var(--color-buff))",
@@ -33,6 +34,7 @@ export default {
       },
       fontSize: {
         h2: "2.5rem",
+        "h2-desktop": "3.25rem",
         h3: "2.75rem",
         h4: "2.25rem",
         btn: "1.125rem",
