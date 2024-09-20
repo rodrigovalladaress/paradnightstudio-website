@@ -1,9 +1,8 @@
 <template>
   <a
     class="button flex py-[6px] px-[12px] text-btn leading-none tracking-wide uppercase bg-white
-      text-black transition-colors duration-200 hover:bg-woodsmoke hover:text-white
-      active:bg-tuna active:text-white focus:[&:not(:active)]:outline-dashed
-      focus:[&:not(:active)]:outline-white"
+      text-black transition-colors duration-200 hover:bg-buff active:bg-springsun
+      focus:[&:not(:active)]:outline-dashed focus:[&:not(:active)]:outline-white"
     :href="href"
     target="_blank"
   >

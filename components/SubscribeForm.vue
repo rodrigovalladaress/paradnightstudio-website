@@ -12,7 +12,7 @@
             v-model="email"
             class="flex-grow min-w-32 px-[10px] py-[7.08335px] leading-none border border-solid border-white
               bg-woodsmoke text-white placeholder:text-[#c7c7c7] focus:[&:not(:active)]:outline-dashed
-              focus:[&:not(:active)]:outline-white"
+              focus:[&:not(:active)]:outline-white sm:max-w-[18.75rem]"
             type="email"
             placeholder="name@email.com"
             :disabled="isSending"
@@ -22,8 +22,8 @@
           <button
             class="px-[20px] bg-white outline-none border border-solid border-white border-l-0 text-woodsmoke
               font-sans-condensed tracking-wide leading-none uppercase transition-colors duration-200
-              hover:bg-woodsmoke hover:text-white active:bg-tuna active:text-white
-              focus:[&:not(:active)]:outline-dashed focus:[&:not(:active)]:outline-white"
+              hover:bg-buff active:bg-springsun focus:[&:not(:active)]:outline-dashed
+              focus:[&:not(:active)]:outline-white"
             type="submit"
             :disabled="isSending"
           >
@@ -111,7 +111,21 @@ function onSubmit() {
 </script>
 
 <style lang="scss" scoped>
-input:focus {
-  outline: none;
+@import "@/assets/styles/_variables.scss";
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  &:hover {
+    box-shadow: 0 0 0.35rem 0.2rem rgba(255, 255, 255, 0.95);
+  }
+
+  &:active {
+    box-shadow: 0 0 0.45rem 0.3rem #{mix($color-buff, transparent, 95%)};
+  }
 }
 </style>
