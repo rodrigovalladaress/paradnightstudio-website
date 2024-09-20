@@ -1,7 +1,7 @@
 <template>
   <div class="xl:flex xl:justify-center bg-woodsmoke">
     <div
-      class="flex-col xl:max-w-[74.875rem] bg-auto bg-repeat
+      class="flex-col xl:w-full xl:max-w-[75rem] bg-auto bg-repeat
         bg-[url('https://paradnight-studio.sirv.com/paradnight-website/Grainy%207%20-%20512x512.png?w=256&h=256')]
         content-shadow"
     >
