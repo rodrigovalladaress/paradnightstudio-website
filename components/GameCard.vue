@@ -25,11 +25,11 @@
         'bg-woodsmoke sm:w-[22.063rem] lg:flex-grow': !item.isFeatured,
       }"
     >
-      <h4 class="text-h4 font-heading mb-headingbottomxs text-white leading-none">
+      <h4 class="text-h4 font-heading mb-headingbottom text-white leading-none">
         {{ item.title }}
       </h4>
 
-      <p class="leading-[1.2] text-white">{{ item.description }}</p>
+      <p class="leading-normal text-white">{{ item.description }}</p>
 
       <div class="flex flex-col flex-grow justify-end mt-[1.875rem] gap-[18px]">
         <GameButton v-for="{ label, link } in item.actions" :key="label" :href="link">

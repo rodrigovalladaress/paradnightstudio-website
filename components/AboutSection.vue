@@ -21,7 +21,7 @@
         />
       </div>
 
-      <div class="text-xl space-y-[0.75rem] leading-[1.2] text-white">
+      <div class="text-xl space-y-[0.75rem] leading-snug text-white">
         <p>
           Paradnight Studio is a small indie game studio. I (Rodrigo) do most of the
           design and programming work, but I usually collaborate with
