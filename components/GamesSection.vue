@@ -13,19 +13,19 @@
       <GameCard v-for="item in games" :key="item.id" :item />
     </div>
 
-    <div class="sm:flex sm:justify-center">
+    <div class="flex justify-center">
       <!-- 22.063rem is the width of the GameCard -->
       <!-- 45.75rem is the width of two GameCards and the gap -->
       <h3
-        class="mt-[3.375rem] mb-headingbottom text-h3 leading-none font-heading text-springsun
-          sm:w-[22.063rem] lg:w-[45.75rem]"
+        class="mt-[3.375rem] mb-headingbottom text-h3 leading-none font-heading text-springsun w-[25rem]
+          md:w-[45.75rem] lg:w-[45.75rem]"
       >
         Experiments
       </h3>
     </div>
 
     <div
-      class="flex flex-col gap-7 sm:items-center lg:flex-wrap lg:flex-row lg:justify-between lg:mx-auto
+      class="flex flex-col gap-7 items-center lg:flex-wrap lg:flex-row lg:justify-between lg:mx-auto
         lg:w-[45.75rem] lg:items-stretch lg:gap-0"
     >
       <GameCard v-for="item in experiments" :key="item.id" :item />
