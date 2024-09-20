@@ -44,7 +44,7 @@ const socials = [
     iconComponent: SvgoBluesky,
   },
   {
-    href: "mailto:hello@paradnightstudio",
+    href: "mailto:hello@paradnightstudio.com",
     label: "Email",
     iconComponent: SvgoEmail,
   },
