@@ -1,5 +1,5 @@
 <template>
-  <div class="px-edge pb-edge bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
+  <div class="px-edge py-edge2x bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
     <div class="md:flex md:justify-center">
       <h3
         class="mb-headingbottom text-h3 leading-none font-heading text-springsun md:w-[45.75rem]"

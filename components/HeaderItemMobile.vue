@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center px-edge pt-edge2x bg-gradient-to-b from-tuna/95 to-woodsmoke/95"
+    class="flex justify-center px-edge py-edge2x bg-gradient-to-b from-tuna/95 to-woodsmoke/95"
   >
     <h1 class="w-fit overflow-hidden">
       <ParadnightLogo />
