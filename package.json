@@ -13,8 +13,6 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@capsizecss/core": "^4.1.2",
-    "@capsizecss/unpack": "^2.3.0",
     "@nuxt/eslint": "^0.5.6",
     "@nuxt/fonts": "^0.7.2",
     "nuxt": "^3.13.0",

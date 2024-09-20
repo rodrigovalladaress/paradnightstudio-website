@@ -38,7 +38,7 @@
 
       <div
         class="absolute bottom-[12px] w-full text-center font-heading"
-        :style="{ ...capsizeStyles }"
+        style="font-size: 42.5273px; line-height: 35px"
       >
         Paradnight Studio
       </div>
@@ -46,21 +46,6 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { createStyleObject } from "@capsizecss/core";
-
-const {
-  value: { steelfish },
-} = useCapsizeCss();
-
-let capsizeStyles: null | object = null;
-if (steelfish) {
-  capsizeStyles = createStyleObject({
-    capHeight: 35,
-    lineGap: 0,
-    fontMetrics: steelfish,
-  });
-}
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped></style>
