@@ -1,24 +1,30 @@
 <template>
-  <div class="px-edge pb-8 bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
-    <h3 class="mb-headingbottom text-h3 leading-none font-heading text-springsun">
-      Contact
-    </h3>
+  <div
+    class="flex justify-center px-edge pb-8 bg-gradient-to-b from-tuna/95 to-woodsmoke/95
+      sm:pb-[90px]"
+  >
+    <div class="w-full max-w-[37.5rem]">
+      <h3 class="mb-headingbottom text-h3 leading-none font-heading text-springsun">
+        Contact
+      </h3>
 
-    <SubscribeForm />
+      <SubscribeForm />
 
-    <div class="flex justify-between mt-edge2x text-springsun">
-      <a
-        v-for="item of socials"
-        :key="item.label"
-        :href="item.href"
-        target="_blank"
-        :aria-label="item.label"
-        class="focus:[&:not(:active)]:outline-dashed focus:[&:not(:active)]:outline-white"
-      >
-        <div class="size-[3rem]">
-          <component :is="item.iconComponent" class="size-[100%_!important]" />
-        </div>
-      </a>
+      <div class="flex justify-between mt-edge2x text-springsun">
+        <a
+          v-for="item of socials"
+          :key="item.label"
+          :href="item.href"
+          target="_blank"
+          :aria-label="item.label"
+          class="hover:text-buff active:text-springsun focus:[&:not(:active)]:outline-dashed
+            focus:[&:not(:active)]:outline-white"
+        >
+          <div class="size-[3rem]">
+            <component :is="item.iconComponent" class="size-[100%_!important]" />
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
