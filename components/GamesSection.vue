@@ -54,7 +54,7 @@ const games: Game[] = [
       },
       {
         label: "Buy on itch",
-        link: "https://itch.io/app/2987830/The_Nameless_City/",
+        link: "https://paradnight-studio.itch.io/the-nameless-city",
       },
     ],
     isFeatured: true,
@@ -69,17 +69,17 @@ const experiments: Game[] = [
       "Short experimental game about exploring dreams. It was developed for " +
       "the LSDJAM 2023.",
     image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2987830/header.jpg",
+      "https://paradnight-studio.sirv.com/paradnight-website/Dream%20Machine%20Logo.png",
     actions: [
       {
         label: "Play on itch",
-        link: "https://itch.io/app/2987830/The_Nameless_City/",
+        link: "https://paradnight-studio.itch.io/dream-machine",
       },
     ],
     isFeatured: false,
   },
   {
-    id: "2",
+    id: "3",
     title: "Pixels Out of Space",
     description:
       "Action/platformer game loosely inspired by Lovecraft’s short story " +
@@ -88,11 +88,11 @@ const experiments: Game[] = [
       "of a mysterious entity, each level has an unique effect triggered when " +
       "the colour palette changes.",
     image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2987830/header.jpg",
+      "https://paradnight-studio.sirv.com/paradnight-website/Pixels%20Out%20of%20Space%20Logo.png",
     actions: [
       {
         label: "Play on itch",
-        link: "https://itch.io/app/2987830/The_Nameless_City/",
+        link: "https://dim3.itch.io/pixels-out-of-space",
       },
     ],
     isFeatured: false,
