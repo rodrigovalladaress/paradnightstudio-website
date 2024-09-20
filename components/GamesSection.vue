@@ -1,10 +1,14 @@
 <template>
   <div class="px-edge pb-edge bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
-    <h3 class="mb-headingbottom text-h3 leading-none font-heading text-springsun">
-      Games
-    </h3>
+    <div class="md:flex md:justify-center">
+      <h3
+        class="mb-headingbottom text-h3 leading-none font-heading text-springsun md:w-[45.75rem]"
+      >
+        Games
+      </h3>
+    </div>
 
-    <div class="flex flex-col gap-7">
+    <div class="flex flex-col gap-7 md:flex-row md:justify-center">
       <GameCard v-for="item in games" :key="item.id" :item />
     </div>
 

@@ -1,6 +1,15 @@
 <template>
-  <div class="flex flex-col">
-    <div class="w-full h-[300px] overflow-clip sm:h-[22.063rem] sm:w-[22.063rem]">
+  <div
+    class="flex flex-col"
+    :class="{ 'md:flex-row md:max-w-[45.75rem]': item.isFeatured }"
+  >
+    <div
+      class="w-full h-[300px] overflow-clip sm:h-[22.063rem] sm:w-[22.063rem]"
+      :class="{
+        'sm:w-full md:h-full md:w-[22.063rem]': item.isFeatured,
+        'sm:w-[22.063rem]': !item.isFeatured,
+      }"
+    >
       <img
         :src="item.image"
         :alt="`${item.title} logo`"
@@ -11,7 +20,8 @@
     <div
       class="flex flex-col px-[18px] pt-[11px] pb-[18px]"
       :class="{
-        'bg-barneypurple': item.isFeatured,
+        'bg-barneypurple md:flex-grow md:px-[26px] md:pt-[19px] pb-[20px]':
+          item.isFeatured,
         'bg-woodsmoke sm:w-[22.063rem] lg:flex-grow': !item.isFeatured,
       }"
     >
