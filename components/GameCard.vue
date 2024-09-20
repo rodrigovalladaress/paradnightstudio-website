@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="w-full h-[300px] overflow-clip sm:h-[300px] sm:w-[300px]">
+  <div class="flex flex-col">
+    <div class="w-full h-[300px] overflow-clip sm:h-[22.063rem] sm:w-[22.063rem]">
       <img
         :src="item.image"
         :alt="`${item.title} logo`"
@@ -9,8 +9,11 @@
     </div>
 
     <div
-      class="px-[18px] pt-[11px] pb-[18px]"
-      :class="{ 'bg-barneypurple': item.isFeatured, 'bg-woodsmoke': !item.isFeatured }"
+      class="flex flex-col px-[18px] pt-[11px] pb-[18px]"
+      :class="{
+        'bg-barneypurple': item.isFeatured,
+        'bg-woodsmoke sm:w-[22.063rem] lg:flex-grow': !item.isFeatured,
+      }"
     >
       <h4 class="text-h4 font-heading mb-headingbottomxs text-white leading-none">
         {{ item.title }}
@@ -18,7 +21,7 @@
 
       <p class="leading-[1.2] text-white">{{ item.description }}</p>
 
-      <div class="flex flex-col mt-[1.875rem] gap-[18px]">
+      <div class="flex flex-col flex-grow justify-end mt-[1.875rem] gap-[18px]">
         <GameButton v-for="{ label, link } in item.actions" :key="label" :href="link">
           <span class="inline-block m-auto font-sans-condensed text-center">
             {{ label }}
