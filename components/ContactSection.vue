@@ -54,7 +54,6 @@ svg {
 
 a:hover {
   svg {
-    /* box-shadow: 0 0 0.35rem 0.2rem rgba(255, 255, 255, 0.95); */
     filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.95));
   }
 }
