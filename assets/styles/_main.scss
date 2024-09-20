@@ -35,5 +35,23 @@
 
   .link {
     text-decoration: underline;
+    transition: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+
+    &:hover {
+      color: $color-buff;
+    }
+
+    &:active {
+      color: $color-springsun;
+    }
+
+    &:focus:not(:active) {
+      outline-width: 2px;
+      outline-style: dashed;
+      outline-color: white;
+      outline-offset: 1px;
+    }
   }
 }
