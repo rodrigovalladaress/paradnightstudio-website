@@ -1,14 +1,15 @@
 <template>
   <div class="px-edge py-edge2x bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
-    <div class="md:flex md:justify-center">
+    <div class="flex justify-center">
       <h3
-        class="mb-headingbottom text-h3 leading-none font-heading text-springsun md:w-[45.75rem]"
+        class="mb-headingbottom text-h3 leading-none font-heading text-springsun w-[25rem]
+          md:w-[45.75rem]"
       >
         Games
       </h3>
     </div>
 
-    <div class="flex flex-col gap-7 md:flex-row md:justify-center">
+    <div class="flex gap-7 flex-row justify-center">
       <GameCard v-for="item in games" :key="item.id" :item />
     </div>
 
@@ -45,7 +46,7 @@ const games: Game[] = [
       "PSX era and uses AI generated images to convey concepts alien to the " +
       "human mind.",
     image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2987830/header.jpg",
+      "https://paradnight-studio.sirv.com/paradnight-website/The%20Nameless%20City%20logo.png",
     actions: [
       {
         label: "Buy on Steam",

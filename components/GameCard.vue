@@ -1,21 +1,20 @@
 <template>
   <div
     class="flex flex-col"
-    :class="{ 'md:flex-row md:max-w-[45.75rem]': item.isFeatured }"
+    :class="{
+      'max-w-[25rem] md:flex-row md:max-w-[45.75rem] md:items-center': item.isFeatured,
+    }"
   >
     <div
-      class="w-full h-[300px] overflow-clip sm:h-[22.063rem] sm:w-[22.063rem]"
-      :class="{
-        'sm:w-full md:h-full md:w-[22.063rem]': item.isFeatured,
-        'sm:w-[22.063rem]': !item.isFeatured,
-      }"
-    >
-      <img
-        :src="item.image"
-        :alt="`${item.title} logo`"
-        class="h-full w-auto max-w-max m-auto object-contain relative left-[50%] translate-x-[-50%]"
-      />
-    </div>
+      class="w-full aspect-square bg-cover bg-no-repeat bg-center"
+      :class="[
+        {
+          'sm:w-full md:min-w-[22.063rem] md:h-full': item.isFeatured,
+          'sm:w-[22.063rem] sm:h-[22.063rem]': !item.isFeatured,
+        },
+      ]"
+      :style="{ backgroundImage: `url('${item.image}')` }"
+    ></div>
 
     <div
       class="flex flex-col px-[18px] pt-[11px] pb-[18px]"
