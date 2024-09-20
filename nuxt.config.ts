@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxt/test-utils/module", "@nuxt/fonts", "nuxt-svgo"],
@@ -9,5 +10,10 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  nitro: {
+    compressPublicAssets: { gzip: true, brotli: true },
+    preset: "netlify-static",
+    static: true,
   },
 });
