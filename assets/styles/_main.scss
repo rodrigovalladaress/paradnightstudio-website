@@ -1,0 +1,73 @@
+@import "utils";
+@import "variables";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// https://tailwindcss.com/docs/customizing-colors#using-css-variables
+@layer base {
+  :root {
+    --color-tuna: #{format-color-for-tailwind($color-tuna)};
+    --color-woodsmoke: #{format-color-for-tailwind($color-woodsmoke)};
+    --color-violetpink: #{format-color-for-tailwind($color-violetpink)};
+    --color-purple: #{format-color-for-tailwind($color-purple)};
+    --color-barneypurple: #{format-color-for-tailwind($color-barneypurple)};
+    --color-buff: #{format-color-for-tailwind($color-buff)};
+    --color-springsun: #{format-color-for-tailwind($color-springsun)};
+
+    // https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/#leveraging-css-variables-15
+    --14px: 0.875rem;
+    --15px: 0.9375rem;
+    --16px: 1rem;
+    --17px: 1.0625rem;
+    --18px: 1.125rem;
+    --19px: 1.1875rem;
+    --20px: 1.25rem;
+    --21px: 1.3125rem;
+  }
+
+  html,
+  body,
+  #__nuxt {
+    height: 100%;
+  }
+
+  .link {
+    text-decoration: underline;
+    transition: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+
+    &:hover {
+      color: $color-buff;
+    }
+
+    &:active {
+      color: $color-springsun;
+    }
+
+    &:focus:not(:active) {
+      outline-width: 2px;
+      outline-style: dashed;
+      outline-color: white;
+      outline-offset: 1px;
+    }
+  }
+
+  .appear {
+    transition: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 3000ms;
+  }
+
+  .appear-hidden {
+    opacity: 0;
+    filter: saturate(0);
+  }
+
+  .appear-visible {
+    opacity: 1;
+    filter: saturate(1);
+  }
+}

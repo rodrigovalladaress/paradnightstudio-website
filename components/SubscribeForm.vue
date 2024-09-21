@@ -1,0 +1,131 @@
+<template>
+  <div class="text-springsun leading-tight">
+    <div v-if="!isSent">
+      <form action="#" class="flex flex-col gap-[0.625rem]" @submit.prevent="onSubmit">
+        <label for="mailing-list" class="text-m">
+          Subscribe to our mailing list for updates on new games:
+        </label>
+
+        <div class="flex">
+          <input
+            id="mailing-list"
+            v-model="email"
+            class="flex-grow min-w-32 px-[10px] py-[7.08335px] leading-none border border-solid border-white
+              bg-woodsmoke text-white placeholder:text-[#c7c7c7] focus:[&:not(:active)]:outline-dashed
+              focus:[&:not(:active)]:outline-white sm:max-w-[18.75rem]"
+            type="email"
+            placeholder="name@email.com"
+            :disabled="isSending"
+            required
+          />
+
+          <button
+            class="px-[20px] bg-white outline-none border border-solid border-white border-l-0 text-woodsmoke
+              font-sans-condensed tracking-wide leading-none uppercase transition-colors duration-200
+              hover:bg-buff active:bg-springsun focus:[&:not(:active)]:outline-dashed
+              focus:[&:not(:active)]:outline-white"
+            type="submit"
+            :disabled="isSending"
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <p v-show="error" class="text-red-300">
+          {{ error }}
+        </p>
+
+        <p class="text-[0.875rem]">
+          We promise to send no more than two emails per month — usually less than that.
+        </p>
+      </form>
+    </div>
+
+    <div v-else>
+      Thank you for subscribing! You should receive a confirmation email shortly.
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+const email = ref("");
+const error = ref("");
+const isSending = ref(false);
+const isSent = ref(false);
+
+watch(email, () => {
+  error.value = "";
+});
+
+async function subscribeUser() {
+  isSending.value = true;
+
+  const { VITE_CONVERTKIT_PUBLIC_API_KEY: apiKey, VITE_CONVERTKIT_FORM_ID: formId } = (
+    import.meta as ImportMeta & {
+      env: { VITE_CONVERTKIT_PUBLIC_API_KEY: string; VITE_CONVERTKIT_FORM_ID: string };
+    }
+  ).env;
+
+  const body = {
+    api_key: apiKey,
+    email: email.value,
+  };
+
+  try {
+    const res = await fetch(
+      `https://api.convertkit.com/v3/forms/23434343${formId}/subscribe`,
+      {
+        method: "post",
+        body: JSON.stringify(body),
+        headers: { "Content-Type": "application/json" },
+      },
+    );
+
+    if (!res.ok) {
+      const { message, error }: { message: string; error: string } = await res.json();
+
+      throw new Error(message || error ? `${error} ${message}.` : "¯\\_(ツ)_/¯");
+    }
+
+    isSent.value = true;
+  } catch (err) {
+    console.error("Submission error:", err);
+
+    let errorMessage = "Something wrong happened: ";
+    if (err instanceof Error) {
+      errorMessage += err.message;
+    } else {
+      errorMessage += `${err}`;
+    }
+    errorMessage += " Try again later.";
+
+    error.value = errorMessage;
+  } finally {
+    isSending.value = false;
+  }
+}
+
+function onSubmit() {
+  subscribeUser();
+}
+</script>
+
+<style lang="scss" scoped>
+@import "@/assets/styles/_variables.scss";
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  &:hover {
+    box-shadow: 0 0 0.35rem 0.2rem rgba(255, 255, 255, 0.95);
+  }
+
+  &:active {
+    box-shadow: 0 0 0.45rem 0.3rem #{mix($color-buff, transparent, 95%)};
+  }
+}
+</style>

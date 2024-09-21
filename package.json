@@ -1,19 +1,40 @@
 {
-  "name": "paradnightstudio-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -o",
-    "dev": "live-server --watch=index.html,style.css",
-    "build": "node build.mjs"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "",
+  "dependencies": {
+    "@nuxt/eslint": "^0.5.6",
+    "@nuxt/fonts": "^0.7.2",
+    "nuxt": "^3.13.0",
+    "nuxt-svgo": "^4.0.6",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "live-server": "^1.2.2"
+    "@nuxt/test-utils": "^3.14.1",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/vue": "^8.1.0",
+    "@vue/test-utils": "^2.4.6",
+    "autoprefixer": "^10.4.20",
+    "eslint-config-prettier": "^9.1.0",
+    "happy-dom": "^15.7.3",
+    "playwright-core": "^1.47.0",
+    "postcss": "^8.4.45",
+    "prettier": "3.3.3",
+    "prettier-plugin-classnames": "^0.7.2",
+    "sass": "^1.78.0",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   }
 }
