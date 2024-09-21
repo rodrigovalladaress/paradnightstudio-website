@@ -54,4 +54,20 @@
       outline-offset: 1px;
     }
   }
+
+  .appear {
+    transition: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 3000ms;
+  }
+
+  .appear-hidden {
+    opacity: 0;
+    filter: saturate(0);
+  }
+
+  .appear-visible {
+    opacity: 1;
+    filter: saturate(1);
+  }
 }

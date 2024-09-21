@@ -1,7 +1,10 @@
 <template>
   <!-- Add a margin to the parent element so the size of the element fits the 
    size of the scaled child -->
-  <div class="w-fit mx-[-26.5px] my-[-32px] md:mx-[26.5px] md:my-[32px]">
+  <div
+    class="w-fit mx-[-26.5px] my-[-32px] md:mx-[26.5px] md:my-[32px]"
+    :class="[initialClasses, { [visibleClass]: isVisible }]"
+  >
     <div
       class="relative border-solid border-[6px] border-black bg-white scale-[0.75] w-[212px] h-[256px]
         md:scale-[1.25]"
@@ -37,7 +40,7 @@
       </video>
 
       <div
-        class="absolute bottom-[12px] w-full text-center font-heading"
+        class="absolute bottom-[12px] w-full h-[2.188rem] text-center font-heading"
         style="font-size: 42.5273px; line-height: 35px"
       >
         Paradnight Studio
@@ -46,6 +49,8 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { initialClasses, visibleClass, isVisible } = useVisible(1000);
+</script>
 
 <style lang="scss" scoped></style>

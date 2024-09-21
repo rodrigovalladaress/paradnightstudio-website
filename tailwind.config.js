@@ -42,4 +42,5 @@ export default {
     },
   },
   plugins: [],
+  safelist: ["appear", "appear-hidden", "appear-visible"],
 };

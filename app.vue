@@ -5,7 +5,7 @@
         bg-[url('https://paradnight-studio.sirv.com/paradnight-website/Grainy%207%20-%20512x512.png?w=256&h=256')]
         content-shadow"
     >
-      <HeaderItem class="" />
+      <HeaderItem />
 
       <GamesSection />
 
