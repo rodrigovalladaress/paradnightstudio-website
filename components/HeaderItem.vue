@@ -1,6 +1,6 @@
 <template>
   <!-- Mobile header -->
-  <div class="lg:hidden">
+  <div class="flex flex-col lg:hidden min-h-screen">
     <HeaderItemMobile />
   </div>
 
