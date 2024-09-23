@@ -4,7 +4,10 @@
       sm:pb-[90px]"
   >
     <div class="w-full max-w-[37.5rem]">
-      <h3 class="mb-headingbottom text-h3 leading-none font-heading text-springsun">
+      <h3
+        id="contact"
+        class="mb-headingbottom text-h3 leading-none font-heading text-springsun"
+      >
         Contact
       </h3>
 

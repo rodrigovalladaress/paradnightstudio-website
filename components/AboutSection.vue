@@ -3,7 +3,9 @@
     class="flex justify-center pt-edge3x px-edge pb-[7.5rem] sm:py-[250px] bg-gradient"
   >
     <div class="w-full max-w-[37.5rem]">
-      <h3 class="mb-4 text-h3 leading-none font-heading text-springsun">About</h3>
+      <h3 id="about" class="mb-4 text-h3 leading-none font-heading text-springsun">
+        About
+      </h3>
 
       <div class="mb-4 w-full h-[150px] overflow-clip sm:h-[215px]">
         <img

@@ -2,6 +2,7 @@
   <div class="px-edge py-edge2x bg-gradient-to-b from-tuna/95 to-woodsmoke/95">
     <div class="flex justify-center">
       <h3
+        id="games"
         class="mb-headingbottom text-h3 leading-none font-heading text-springsun w-[25rem]
           md:w-[45.75rem]"
       >
@@ -17,6 +18,7 @@
       <!-- 22.063rem is the width of the GameCard -->
       <!-- 45.75rem is the width of two GameCards and the gap -->
       <h3
+        id="experiments"
         class="mt-[3.375rem] mb-headingbottom text-h3 leading-none font-heading text-springsun w-[25rem]
           md:w-[45.75rem] lg:w-[45.75rem]"
       >
