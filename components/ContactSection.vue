@@ -33,14 +33,9 @@
 </template>
 
 <script lang="ts" setup>
-import { SubscribeForm, SvgoTwitter, SvgoBluesky, SvgoEmail } from "#components";
+import { SubscribeForm, SvgoBluesky, SvgoEmail } from "#components";
 
 const socials = [
-  {
-    href: "https://x.com/ParadnightStdio",
-    label: "X/Twitter",
-    iconComponent: SvgoTwitter,
-  },
   {
     href: "https://bsky.app/profile/paradnight-studio.bsky.social",
     label: "Bluesky",
