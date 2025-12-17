@@ -45,8 +45,7 @@ const games: Game[] = [
     description:
       "Narrative-driven first person horror adventure inspired by Lovecraft's " +
       "short novel of the same name. It has lo-fi 3D graphics inspired by the " +
-      "PSX era and uses AI generated images to convey concepts alien to the " +
-      "human mind.",
+      "PSX era.",
     image:
       "https://paradnight-studio.sirv.com/paradnight-website/The%20Nameless%20City%20logo.png",
     actions: [
