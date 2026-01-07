@@ -36,7 +36,8 @@
         </p>
 
         <p class="text-[0.875rem]">
-          We promise to send no more than two emails per month — usually less than that.
+          We promise to send no more than two emails per month
+          — usually less than that.
         </p>
       </form>
     </div>
