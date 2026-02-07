@@ -179,6 +179,12 @@ https://fonts.nuxt.com/get-started/installation
 npx nuxi@latest module add fonts
 ```
 
+### 7. How to add and use new SVG icons
+
+- Download the svg file to `assets/icons`
+- Import it by using a `import { Svgo[SvgFileNameInCamelCase] } from "#components";` import
+  - e.g.: If the file name is is `bluesky.svg`, use `import { SvgoBluesky } from "#components";`
+
 # Nuxt README:
 
 # Nuxt 3 Minimal Starter

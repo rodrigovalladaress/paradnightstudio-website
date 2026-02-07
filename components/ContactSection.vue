@@ -20,6 +20,7 @@
           :href="item.href"
           target="_blank"
           :aria-label="item.label"
+          rel="me"
           class="hover:text-buff active:text-springsun focus:[&:not(:active)]:outline-dashed
             focus:[&:not(:active)]:outline-white"
         >
@@ -33,13 +34,18 @@
 </template>
 
 <script lang="ts" setup>
-import { SubscribeForm, SvgoBluesky, SvgoEmail } from "#components";
+import { SubscribeForm, SvgoBluesky, SvgoMastodon, SvgoEmail } from "#components";
 
 const socials = [
   {
     href: "https://bsky.app/profile/paradnight-studio.bsky.social",
     label: "Bluesky",
     iconComponent: SvgoBluesky,
+  },
+  {
+    href: "https://mastodon.gamedev.place/@paradnightstudio",
+    label: "Mastodon",
+    iconComponent: SvgoMastodon,
   },
   {
     href: "mailto:hello@paradnight-studio.com",

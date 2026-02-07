@@ -25,3 +25,6 @@ logs
 
 # Optional stylelint cache
 .stylelintcache
+
+# Vitest
+vitest.config.ts.timestamp*
