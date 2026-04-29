@@ -7,26 +7,15 @@
         </label>
 
         <div class="flex">
-          <input
-            id="mailing-list"
-            v-model="email"
-            class="flex-grow min-w-32 px-[10px] py-[7.08335px] leading-none border border-solid border-white
+          <input id="mailing-list" v-model="email" class="flex-grow min-w-32 px-[10px] py-[7.08335px] leading-none border border-solid border-white
               bg-woodsmoke text-white placeholder:text-[#c7c7c7] focus:[&:not(:active)]:outline-dashed
-              focus:[&:not(:active)]:outline-white sm:max-w-[18.75rem]"
-            type="email"
-            placeholder="name@email.com"
-            :disabled="isSending"
-            required
-          />
+              focus:[&:not(:active)]:outline-white sm:max-w-[18.75rem]" type="email" placeholder="name@email.com"
+            :disabled="isSending" required />
 
-          <button
-            class="px-[20px] bg-white outline-none border border-solid border-white border-l-0 text-woodsmoke
+          <button class="px-[20px] bg-white outline-none border border-solid border-white border-l-0 text-woodsmoke
               font-sans-condensed tracking-wide leading-none uppercase transition-colors duration-200
               hover:bg-buff active:bg-springsun focus:[&:not(:active)]:outline-dashed
-              focus:[&:not(:active)]:outline-white"
-            type="submit"
-            :disabled="isSending"
-          >
+              focus:[&:not(:active)]:outline-white" type="submit" :disabled="isSending">
             Subscribe
           </button>
         </div>
@@ -49,6 +38,18 @@
 </template>
 
 <script lang="ts" setup>
+const { VITE_CONVERTKIT_PUBLIC_API_KEY: apiKey, VITE_CONVERTKIT_FORM_ID: formId } = (
+  import.meta as ImportMeta & {
+    env: { VITE_CONVERTKIT_PUBLIC_API_KEY: string; VITE_CONVERTKIT_FORM_ID: string };
+  }
+).env;
+if (!apiKey) {
+  throw new Error("API Key not configured in .env")
+}
+if (!formId) {
+  throw new Error("Form ID not configured in .env")
+}
+
 const email = ref("");
 const error = ref("");
 const isSending = ref(false);
@@ -61,12 +62,6 @@ watch(email, () => {
 async function subscribeUser() {
   isSending.value = true;
 
-  const { VITE_CONVERTKIT_PUBLIC_API_KEY: apiKey, VITE_CONVERTKIT_FORM_ID: formId } = (
-    import.meta as ImportMeta & {
-      env: { VITE_CONVERTKIT_PUBLIC_API_KEY: string; VITE_CONVERTKIT_FORM_ID: string };
-    }
-  ).env;
-
   const body = {
     api_key: apiKey,
     email: email.value,
@@ -74,7 +69,7 @@ async function subscribeUser() {
 
   try {
     const res = await fetch(
-      `https://api.convertkit.com/v3/forms/23434343${formId}/subscribe`,
+      `https://api.convertkit.com/v3/forms/${formId}/subscribe`,
       {
         method: "post",
         body: JSON.stringify(body),
