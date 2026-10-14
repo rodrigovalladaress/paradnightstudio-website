@@ -32,7 +32,7 @@
     </div>
 
     <div v-else>
-      Thank you for subscribing! You should receive a confirmation email shortly.
+      Thanks for subscribing! You should receive a confirmation email shortly (check your spam folder).
     </div>
   </div>
 </template>
